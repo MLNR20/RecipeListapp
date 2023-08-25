@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Finals_MOBDEVT_Group5</string>
+    <string name="login_name">Login</string>
+    <string name="login_subtitle">Sign in to continue...</string>
+    <string name="email_text">Email</string>
+    <string name="email_hint">Your email...</string>
+    <string name="password_text">Password</string>
+    <string name="password_hint">Your password...</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="create_account">Create an account...</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="confirm_text">Confirm password...</string>
+    <string name="header">%s</string>
+
+</resources>

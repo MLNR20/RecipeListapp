@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/commonbg"
+    tools:context=".AddActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="114dp"
+        android:background="#00FB6B6B"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="#F4E9E9"
+        app:title="WELCOME"
+        app:titleTextColor="#F4E9E9" />
+
+    <ScrollView
+        android:layout_width="408dp"
+        android:layout_height="545dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/recipeNameTxtDetails"
+                style="@style/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Add Recipe" />
+
+            <TextView
+                android:id="@+id/subtitleRecipeName"
+                style="@style/subheader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add your recipe today!" />
+
+            <TextView
+                android:id="@+id/textView10"
+                style="@style/textHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recipe Name" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/recipeTextInputLayout"
+                style="@style/inputTextBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EFEFEF">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/recipeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#EFEFEF"
+                    android:cursorVisible="true"
+                    android:hint="Recipe name..."
+                    android:inputType="text"
+                    tools:textColorHint="@color/gray" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView13"
+                style="@style/textHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cook Time" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cookTimeIL"
+                style="@style/inputTextBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#EFEFEF">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cookTxtBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#EFEFEF"
+                    android:cursorVisible="true"
+                    android:hint="Cook time..."
+                    android:inputType="datetime|time"
+                    tools:textColorHint="@color/gray" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView9"
+                style="@style/textHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Short Description" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/shortDescriptionTimeIL"
+                style="@style/inputTextBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#EFEFEF">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/shortDescriptionTxtBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#EFEFEF"
+                    android:cursorVisible="true"
+                    android:hint="Short Description..."
+                    android:inputType="text"
+                    tools:textColorHint="@color/gray" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView15"
+                style="@style/textHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Food Image URL" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/foodImage"
+                style="@style/inputTextBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#EFEFEF">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/FoodImageTxtBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#EFEFEF"
+                    android:cursorVisible="true"
+                    android:inputType="text|textMultiLine"
+                    tools:hint="Ingredients..."
+                    tools:textColorHint="@color/gray" />
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+            <TextView
+                android:id="@+id/textView14"
+                style="@style/textHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingredients" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/IngredientsIL"
+                style="@style/inputTextBoxML"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#EFEFEF">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/IngredientsTxtBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#EFEFEF"
+                    android:cursorVisible="true"
+                    android:inputType="text|textMultiLine"
+                    tools:hint="Ingredients..."
+                    tools:textColorHint="@color/gray" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView8"
+                style="@style/textHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Instructions" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/InstructionsIL"
+                style="@style/inputTextBoxML"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#EFEFEF">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/InstructionsTxtBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#EFEFEF"
+                    android:cursorVisible="true"
+                    android:inputType="text|textMultiLine"
+                    tools:hint="Instructions..."
+                    tools:textColorHint="@color/gray" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/loginBtn"
+                android:layout_width="365dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="Add"
+                tools:layout_marginTop="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/red_color"
+        app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,171 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Finals_MOBDEVT_Group5" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+
+    <style name = "loginTitle" parent="Widget.MaterialComponents.TextView">
+        <item name = "android:gravity">center</item>
+        <item name ="fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name = "loginTitleSub" parent="Widget.MaterialComponents.TextView">
+        <item name = "android:gravity">center</item>
+        <item name ="fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+
+
+    <style name = "loginText" parent="Widget.MaterialComponents.TextView">
+
+        <item name ="fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name = "textHeader" parent="Widget.MaterialComponents.TextView">
+
+        <item name ="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+
+    <style name = "header" parent="Widget.MaterialComponents.TextView">
+
+        <item name ="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name = "subheader" parent="Widget.MaterialComponents.TextView">
+
+        <item name ="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+
+    <style name = "loginWarning" parent="Widget.MaterialComponents.TextView">
+
+        <item name ="fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name = "btnCRUD" parent="Widget.MaterialComponents.TextView">
+        <item name ="fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+    </style>
+
+
+    <style name = "loginTextBox" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="boxCornerRadiusTopEnd">30dp</item>
+        <item name="boxCornerRadiusBottomEnd">30dp</item>
+        <item name="boxCornerRadiusBottomStart">30dp</item>
+        <item name="boxCornerRadiusTopStart">30dp</item>
+        <item name="android:backgroundTint">@color/gray_bg_til</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="hintTextColor">@color/gray</item>
+    </style>
+
+    <style name = "inputTextBox" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="boxCornerRadiusTopEnd">30dp</item>
+        <item name="boxCornerRadiusBottomEnd">30dp</item>
+        <item name="boxCornerRadiusBottomStart">30dp</item>
+        <item name="boxCornerRadiusTopStart">30dp</item>
+        <item name="android:backgroundTint">@color/gray_bg_til</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="hintTextColor">@color/gray</item>
+    </style>
+
+    <style name = "inputTextBoxML" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="boxCornerRadiusTopEnd">30dp</item>
+        <item name="boxCornerRadiusBottomEnd">30dp</item>
+        <item name="boxCornerRadiusBottomStart">30dp</item>
+        <item name="boxCornerRadiusTopStart">30dp</item>
+        <item name="android:backgroundTint">@color/gray_bg_til</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="hintTextColor">@color/gray</item>
+    </style>
+
+
+    <style name = "loginpassword" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="boxCornerRadiusTopEnd">30dp</item>
+        <item name="boxCornerRadiusBottomEnd">30dp</item>
+        <item name="boxCornerRadiusBottomStart">30dp</item>
+        <item name="boxCornerRadiusTopStart">30dp</item>
+        <item name="android:backgroundTint">@color/gray_bg_til</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="hintTextColor">@color/gray</item>
+        <item name="passwordToggleEnabled">true</item>
+    </style>
+
+
+    <style name="loginBtn" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:backgroundTint">@color/red_color</item>
+        <item name="android:height">65dp</item>
+        <item name="cornerRadius">14dp</item>
+    </style>
+
+    <style name ="toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name ="fontFamily">@font/poppins_bold</item>
+        <item name ="titleTextColor">@color/white</item>
+        <item name ="subtitleTextColor">@color/white</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
+
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">#FFAEAE</item>
+    </style>
+
+    <style name="Theme.Finals_MOBDEVT_Group5" parent="Base.Theme.Finals_MOBDEVT_Group5" />
+</resources>
