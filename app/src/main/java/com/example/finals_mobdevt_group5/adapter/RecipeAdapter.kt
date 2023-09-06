@@ -19,7 +19,7 @@ import com.example.finals_mobdevt_group5.databinding.CardViewBinding
 import com.example.finals_mobdevt_group5.model.Recipe
 
 
-class RecipeAdapter (private val userList:ArrayList<Recipe>, private val context: Context): RecyclerView.Adapter<RecipeAdapter.MyViewHolder>() {
+class RecipeAdapter (private var userList:ArrayList<Recipe>, private val context: Context): RecyclerView.Adapter<RecipeAdapter.MyViewHolder>() {
 
     private lateinit var  mListener: onItemClickListener
 
@@ -61,4 +61,14 @@ class RecipeAdapter (private val userList:ArrayList<Recipe>, private val context
         Glide.with(context).load(userList[position].url).into(holder.cardFoodImageView)
 
     }
+
+    fun filterList(filterlist: ArrayList<Recipe>) {
+        // below line is to add our filtered
+        // list in our course array list.
+        userList = filterlist
+        // below line is to notify our adapter
+        // as change in recycler view data.
+        notifyDataSetChanged()
+    }
+
 }

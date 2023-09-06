@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Adapter
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
@@ -19,6 +20,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.util.Locale
 
 class RecyclerView : AppCompatActivity() {
 
@@ -28,7 +30,7 @@ class RecyclerView : AppCompatActivity() {
     //firebase
     private lateinit var auth: FirebaseAuth
     private var db = Firebase.firestore
-    private lateinit var news:Array<Recipe>
+    private lateinit var recipeQuery:ArrayList<Recipe>
 
     //views
     private val recyclerView by lazy{ binding.recyclerView}
@@ -59,6 +61,34 @@ class RecyclerView : AppCompatActivity() {
         }
 
 
+        binding.searchView.clearFocus()
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+
+                return false
+            }
+            override fun onQueryTextChange(newText: String): Boolean {
+                recipeQuery.clear()
+                val searchText = newText!!.toLowerCase(Locale.getDefault())
+                if(searchText.isNotEmpty()){
+                    recipeList.forEach{
+                        if(it.recipeName.toString().toLowerCase(Locale.getDefault()).contains(searchText)){
+                            recipeQuery.add(it)
+                        }
+                    }
+
+                    recyclerView.adapter!!.notifyDataSetChanged()
+                }
+                else{
+                    recipeQuery.clear()
+                    recipeQuery.addAll(recipeList)
+                    recyclerView.adapter!!.notifyDataSetChanged()
+                }
+                return false
+            }
+        })
+
+
     }
 
 
@@ -66,6 +96,8 @@ class RecyclerView : AppCompatActivity() {
     {
         db = FirebaseFirestore.getInstance()
         recipeList = arrayListOf()
+        recipeQuery = arrayListOf()
+
         db.collection("finalsSample").get().addOnSuccessListener {
             if(!it.isEmpty){
                 for(data in it.documents){
@@ -76,7 +108,8 @@ class RecyclerView : AppCompatActivity() {
                 }
             }
 
-            var adapter = RecipeAdapter(recipeList, this@RecyclerView)
+            recipeQuery.addAll(recipeList)
+            var adapter = RecipeAdapter(recipeQuery, this@RecyclerView)
             recyclerView.adapter = adapter
             adapter.setOnItemClickListener(object: RecipeAdapter.onItemClickListener{
                 override fun onItemClick(position: Int) {
@@ -159,7 +192,7 @@ class RecyclerView : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-       loadDb()
+        loadDb()
         bottomNavigation.setSelectedItemId(R.id.homeBtn)
         auth =  FirebaseAuth.getInstance()
         val viewModel by viewModels<MainViewModel>()
